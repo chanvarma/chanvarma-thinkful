@@ -537,8 +537,8 @@ def get_imdb_no(wiki_movie):
     errors = (requests.exceptions.MissingSchema or
 
               KeyError or
-          requests.exceptions.ConnectionError or
-          requests.exceptions.NewConnectionError or
+              requests.exceptions.ConnectionError or
+              requests.exceptions.NewConnectionError or
               requests.exceptions.MaxRetryError)
 
     try:
