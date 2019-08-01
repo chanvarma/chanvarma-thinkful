@@ -1,3 +1,6 @@
+-- Module 11, Checkpoint 5
+-- https://courses.thinkful.com/dsbc-sql-foundations-1-v1/checkpoint/5
+
 -- How many records are in the vehicles table? Provide the query you’d use to determine this as well as the answer to the question.
 
 SELECT COUNT(*)
