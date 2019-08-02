@@ -1,8 +1,7 @@
 -- Write a query that returns a list of all the unique values in the 'country' field.
 
-SELECT COUNT(DISTINCT country)
+SELECT DISTINCT country
 FROM ksprojects;
--- 22 unique values
 
 -- How many unique values are there for the main_category field? What about for the category field?
 
