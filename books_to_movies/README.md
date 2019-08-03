@@ -3,9 +3,10 @@
   * `.ipynb` file — [here](https://github.com/chanvarma/thinkful-capstones/blob/master/books_to_movies/data_wrangling.ipynb) (large file containing print outputs that are 2000+ lines, and is primarily a workbook that is not formatted for viewing on github)
 * Main project workbook (contains project introduction, research questions, data visualisation and inferences)
   * `.ipynb` file — [here](https://github.com/chanvarma/thinkful-capstones/blob/master/books_to_movies/data_viz.ipynb)
+  * `.html` file — [here](https://github.com/chanvarma/thinkful-capstones/blob/master/books_to_movies/data_viz.html) > Right Click on 'View raw' > 'Save Link As...' > Open in a web browser of choice
   
- --- 
-  
+---
+
 ## Introduction
 
 I've always been deeply fascinated by movies that are adapted from book series. As a bibliophile, it gives immense pleasure to see some of your favorite characters (heroes and villains alike!) represented in visual and tangible form. At the same time, there's perhaps the universal debate that follows about whether the "book was better than the movie", or (in some very rare cases), the opposite. 
