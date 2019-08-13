@@ -38,8 +38,120 @@ ORDER BY salary DESC;
 -- Combine these 2 tables by all fields. Keep all records.
 -- Get a distinct list of all player IDs for players who have been put up for HOF induction.
 
-SELECT * FROM hof_inducted UNION 
-SELECT * FROM hof_not_inducted;
+WITH all_players AS
+(
+	SELECT * FROM hof_inducted UNION 
+	SELECT * FROM hof_not_inducted
+)
+SELECT DISTINCT playerID, yearID, inducted, category FROM all_players
+WHERE category = 'Player'
+AND INDUCTED = 'Y';
+
+
+-- Write a query that returns the last name, first name (see people table), and total recorded salaries for all players found in the salaries table.
+
+SELECT namelast, namefirst, s.playerid, salary
+FROM salaries AS s LEFT OUTER JOIN people AS p
+ON s.playerid = p.playerid;
+
+-- Write a query that returns all records from the hof_inducted and hof_not_inducted tables that include playerid, yearid, namefirst, and namelast. Hint: Each FROM statement will include a LEFT OUTER JOIN!
+
+WITH all_players AS
+(
+	SELECT * FROM hof_inducted UNION 
+	SELECT * FROM hof_not_inducted
+)
+SELECT all_players.playerid, yearid, namefirst, namelast
+FROM all_players LEFT OUTER JOIN people
+ON all_players.playerid = people.playerid
+WHERE all_players.playerid IS NOT NULL
+AND yearid IS NOT NULL
+AND namefirst IS NOT NULL
+AND namelast IS NOT NULL;
+
+-- Return a table including all records from both hof_inducted and hof_not_inducted, and include a new field, namefull, which is formatted as namelast , namefirst (in other words, the last name, followed by a comma, then a space, then the first name). The query should also return the yearid and inducted fields. Include only records since 1980 from both tables. Sort the resulting table by yearid, then inducted so that Y comes before N. Finally, sort by the namefull field, A to Z.
+
+WITH all_players AS
+(
+	SELECT * FROM hof_inducted UNION 
+	SELECT * FROM hof_not_inducted
+	
+) 
+SELECT all_players.*, CONCAT(namelast, ', ', namefirst) AS namefull
+FROM all_players LEFT OUTER JOIN people
+ON all_players.playerid = people.playerid
+WHERE yearid >= 1980
+ORDER BY yearid ASC, inducted DESC, namefull ASC;
+
+-- Write a query that returns the highest annual salary for each teamid, ranked from high to low, along with the corresponding playerid. Bonus! Return namelast and namefirst in the resulting table. (You can find these in the people table.)
+
+WITH poeple_and_sal AS
+(
+	SELECT teamid, salary, people.playerid, namefirst, namelast
+	FROM people INNER JOIN salaries
+	ON people.playerID = salaries.playerID
+), max_salaries AS
+(
+	SELECT teamid, max(salary) as max_salary
+	FROM poeple_and_sal
+	GROUP BY teamid
+)
+SELECT DISTINCT max_salaries.teamid, max_salary, playerid, namefirst, namelast
+FROM max_salaries LEFT JOIN poeple_and_sal
+ON max_salaries.teamid = poeple_and_sal.teamid
+AND max_salaries.max_salary = poeple_and_sal.salary
+ORDER BY max_salary DESC;
+
+-- Select birthyear, deathyear, namefirst, and namelast of all the players born since the birth year of Babe Ruth (playerid = ruthba01). Sort the results by birth year from low to high.
+
+SELECT birthyear, deathyear, namefirst, namelast
+FROM people
+WHERE birthyear >= 
+(
+	SELECT birthyear 
+	FROM people
+	WHERE playerid = 'ruthba01'
+)
+ORDER BY birthyear ASC;
+
+-- Using the people table, write a query that returns namefirst, namelast, and a field called usaborn where. The usaborn field should show the following: if the player's birthcountry is the USA, then the record is 'USA.' Otherwise, it's 'non-USA.' Order the results by 'non-USA' records first.
+
+SELECT namefirst, namelast, 
+CASE 
+	WHEN birthcountry = 'USA' THEN 'USA'
+	ELSE 'non-USA' END 
+	AS usaborn
+FROM people
+ORDER BY usaborn;
+
+-- Calculate the average height for players throwing with their right hand versus their left hand. Name these fields right_height and left_height, respectively.
+
+SELECT
+ROUND(AVG(CASE WHEN throws = 'R' THEN height END), 3) AS right_height,
+ROUND(AVG(CASE WHEN throws = 'L' THEN height END), 3) AS left_height
+FROM people;
+
+-- Get the average of each team's maximum player salary since 2010. Hint: WHERE will go inside your CTE.
+
+WITH poeple_and_sal_since2010 AS
+(
+	SELECT teamid, MAX(salary)
+	FROM people INNER JOIN salaries
+	ON people.playerID = salaries.playerID
+	WHERE yearid >= 2010
+	GROUP BY teamid
+)
+SELECT ROUND(AVG(max), 2)
+FROM poeple_and_sal_since2010;
+
+
+
+
+
+
+
+
+
 
 
 
