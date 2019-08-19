@@ -10,7 +10,8 @@ SELECT
 	data_type,
 	is_identity
 FROM 
-	INFORMATION_SCHEMA.COLUMNS 
+	information_schema.columns
+	-- (earlier submission) INFORMATION_SCHEMA.COLUMNS 
 WHERE 
 	table_name = 'naep';
 	
@@ -28,6 +29,9 @@ SELECT
 	ROUND(AVG(avg_math_4_score), 3) AS avg_grade4_score,
 	ROUND(MIN(avg_math_4_score), 3) AS min_grade4_score,
 	ROUND(MAX(avg_math_4_score), 3) AS max_grade4_score
+	(earlier submission ROUND(AVG(avg_math_4_score), 3) AS avg_grade4_score,
+	-- (earlier submission) ROUND(MIN(avg_math_4_score), 3) AS min_grade4_score,
+	-- (earlier submission) ROUND(MAX(avg_math_4_score), 3) AS max_grade4_score
 FROM 
 	naep
 GROUP BY
@@ -44,7 +48,7 @@ SELECT
 	ROUND(AVG(avg_math_4_score), 3) AS avg_grade4_score,
 	ROUND(MIN(avg_math_4_score), 3) AS min_grade4_score,
 	ROUND(MAX(avg_math_4_score), 3) AS max_grade4_score,
-	ROUND(MAX(avg_math_4_score) - MIN(avg_math_4_score), 3) AS range
+	-- (earlier submission) ROUND(MAX(avg_math_4_score) - MIN(avg_math_4_score), 3) AS range
 FROM 
 	naep
 GROUP BY
@@ -64,7 +68,7 @@ FROM
 	naep
 WHERE
 	year = 2000 AND
-	avg_math_4_score IS NOT NULL
+	-- (earlier submission) avg_math_4_score IS NOT NULL
 ORDER BY 
 	avg_math_4_score ASC
 LIMIT 10;
@@ -77,7 +81,7 @@ FROM
 	naep
 WHERE
 	year = 2000 AND
-	avg_math_4_score IS NOT NULL;
+	-- (earlier submission) avg_math_4_score IS NOT NULL;
 	
 -- 7. Write a query that returns a field called below_average_states_y2000 that lists all states with an avg_math_4_score less than the average over all states in the year 2000.
 
