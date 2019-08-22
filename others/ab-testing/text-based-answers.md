@@ -3,7 +3,7 @@
 Contents
 
 * [Checkpoint 2](#Checkpoint-2)
-* [Checkpoint 3](#Checkpoint-3)
+* [Checkpoint 4](#Checkpoint-4)
 * [Checkpoint 5](#Checkpoint-5)
 
 ____
@@ -31,7 +31,7 @@ Framework: Break down prompt into five components: (a) identify treatment and co
 
 ____
 
-#### Checkpoint 3
+#### Checkpoint 4
 
 Call out the potential biases in the proposed experiment. Do your best to try to discover not only the bias, but the initial design. There is plenty of room for interpretation here, so make sure to state what assumptions you're making.
 
