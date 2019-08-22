@@ -2,8 +2,9 @@
 
 Contents
 
-2. [Checkpoint 2](#Checkpoint-2)
-3. [Checkpoint 3](#Checkpoint-3)
+* [Checkpoint 2](#Checkpoint-2)
+* [Checkpoint 3](#Checkpoint-3)
+* [Checkpoint 5](#Checkpoint-5)
 
 ____
 
@@ -45,3 +46,19 @@ Call out the potential biases in the proposed experiment. Do your best to try to
 2. **Biased sample:** There's a degree of self-selection here. People with anxiety or anxiety-like symptoms are more likely to visit the clinic in the first place (as compared to the general public), and as such, an analysis will reveal a higher rate of anxiety. The two samples aren't randomised at all. 
 3. This use case might represent a bias in selection of the key outcome variable. It is fairly intuitive that a new billboard campaign will result in increase in website visits, but the more important business variable might rather be the *order conversion rate* or an intermediary step like the *add to bag rate*. An increase in website visits doesn't confirm that a hypothesis connecting marketing spend and final revenue, but rather just marketing spend and initial acquisition numbers.  
 4. A loyalty program is likely to have returns over a longer timeframe, and as such, is quite likely to not show substantial changes in the first week. 
+
+____
+
+####Checkpoint 5 
+
+1. Even though the samples are randomised, there's an **inherent contextual bias** in the manner in which the message is delivered. Darth Vader is not known for being an especially eloquent speaker (not to mention the constant deep breathing!), and as such, is likely to negatively bias the droids that listen to him. Palpatine, on the other hand, is more likely to be received as an enthusiastic recruiter (despite the content of his message), and is likely to positive bias the droids that listen to him. The experiment should be repeated with the same speaker to eliminate contextual bias. 
+
+2. There's an **apparent selection bias**: the two assignments are not randomised, and hence can't be compared at this level. Friendly planets, by virtue of being friendly, are more likely to maintain favourable attitudes than planets that are less friends. Even if the experiment is repeated such that each envoy visits two friendly and two unfriendly planets, care must be taken to take the levels of friendliness and the planet population in account to prevent a **lurking variable bias (Simpson's paradox).**  
+
+3. Averaging the groups across continents hides a lurking variables bias (Simpson's paradox). A more appropriate conclusion would include the comparison of IT vs HR for individual countries, keeping in account the respective number of employees.
+
+4. This is likely a case of reporting bias. Consumers with pre-existing fitness or high ambition for fitness are more likely to be proud of their fitness stats, and as such, are more likely to 'opt-in'. On the other hand, presently unfit consumers or those with lower levels of disciplines, are more likely to be embarrassed of their fitness goals, and are less likely to want to share their goals. As such, the data will bias towards a fitter section of the population. 
+
+   There are numerous ways to fix this experiment, but the best way is perhaps to make sure that (a) the data collection process is anonymous and aggregated at a regional level, (b) consumers are aware of this. This minimises an individual customer's concern that their lack of fitness might be negatively perceived, leading to more opt-ins from this population. Another way to increase opt-ins might be to incentives opting-in with in-app rewards/perks. 
+
+5. The distribution of question papers that have been cumulatively stacked is likely to result in multiple cases of students sitting adjacent to each other receiving the same version of the question paper. This makes cheating easier as the students are able to compare answers with their neighbours. A better way to prevent cheating would simply be to alternate the stacking of papers, such that no student receives the same version as their neighbour. 
