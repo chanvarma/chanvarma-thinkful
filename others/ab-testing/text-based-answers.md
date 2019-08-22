@@ -49,7 +49,7 @@ Call out the potential biases in the proposed experiment. Do your best to try to
 
 ____
 
-####Checkpoint 5 
+#### Checkpoint 5 
 
 1. Even though the samples are randomised, there's an **inherent contextual bias** in the manner in which the message is delivered. Darth Vader is not known for being an especially eloquent speaker (not to mention the constant deep breathing!), and as such, is likely to negatively bias the droids that listen to him. Palpatine, on the other hand, is more likely to be received as an enthusiastic recruiter (despite the content of his message), and is likely to positive bias the droids that listen to him. The experiment should be repeated with the same speaker to eliminate contextual bias. 
 
