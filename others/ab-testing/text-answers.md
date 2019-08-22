@@ -1,6 +1,13 @@
-**Module 16: Experimental design and A/B testing**
+## Module 16: Experimental design and A/B testing
 
-*Checkpoint 2*
+Contents
+
+2. [Checkpoint 2](#Checkpoint-2)
+3. [Checkpoint 3](#Checkpoint-3)
+
+____
+
+#### Checkpoint 2
 
 For each of the following questions, outline how you could use an A/B test to find an answer. Be sure to identify all five key components of an A/B test we outlined above.
 
@@ -20,4 +27,8 @@ Framework: Break down prompt into five components: (a) identify treatment and co
 | Hypothesis                                             | Subjects taking the supplement sleep better                  | Hard to say                                                  | Hard to say                                                  | The treatment is likely to perform better                    |
 | **Key outcome variable** + other variables of interest | **Hours slept** + energy level through the day, level of freshness in the morning, average number of interruptions during sleep | **Acquisition of new members** + existing member retention, existing members upgrading their plans, satisfaction surveys, etc | **Overall conversion rate** + CTR on initial homepage, member/mailing list signups, add to bags, time spend on site | **Mail open rate, reply rate**                               |
 | Recommendation                                         | Will depend on actual experiment results                     | Will depend on actual experiment results                     | Will depend on actual experiment results                     | Will depend on actual experiment results                     |
+
+____
+
+#### Checkpoint 3
 
