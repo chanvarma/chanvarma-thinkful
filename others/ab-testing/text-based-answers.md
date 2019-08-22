@@ -5,6 +5,7 @@ Contents
 * [Checkpoint 2](#Checkpoint-2)
 * [Checkpoint 4](#Checkpoint-4)
 * [Checkpoint 5](#Checkpoint-5)
+* [Checkpoint 7](#Checkpoint-7)
 
 ____
 
@@ -62,3 +63,38 @@ ____
    There are numerous ways to fix this experiment, but the best way is perhaps to make sure that (a) the data collection process is anonymous and aggregated at a regional level, (b) consumers are aware of this. This minimises an individual customer's concern that their lack of fitness might be negatively perceived, leading to more opt-ins from this population. Another way to increase opt-ins might be to incentives opting-in with in-app rewards/perks. 
 
 5. The distribution of question papers that have been cumulatively stacked is likely to result in multiple cases of students sitting adjacent to each other receiving the same version of the question paper. This makes cheating easier as the students are able to compare answers with their neighbours. A better way to prevent cheating would simply be to alternate the stacking of papers, such that no student receives the same version as their neighbour. 
+
+______
+
+#### Checkpoint 7
+
+Calculate the t-values for the following numbers:
+
+1. $\bar{y_1}= 5$, $\bar{y_2}= 8$, $s_1= 1$, $s_2= 3$, $N_1= 200$, $N_2= 500$
+2. $\bar{y_1}= 1090$, $\bar{y_2}= 999$, $s_1= 400$, $s_2= 30$, $N_1= 900$, $N_2= 100$
+3. $\bar{y_1}= 45$, $\bar{y_2}= 40$, $s_1= 45$, $s_2= 40$, $N_1= 2000$, $N_2= 2000$
+
+
+
+`import scipy.stats as stats`
+
+`stats.ttest_ind_from_stats(mean1=5, mean2 = 8, 
+                           std1 = 1, std2 = 3, 
+                           nobs1 = 200, nobs2 = 500)`
+
+Ttest_indResult(statistic=-13.832909150685692, pvalue=1.2317379271449486e-38)
+
+`stats.ttest_ind_from_stats(mean1=1090, mean2 = 999, 
+                           std1 = 400, std2 = 30, 
+                           nobs1 = 900, nobs2 = 100)`
+
+Ttest_indResult(statistic=2.273283568475885, pvalue=0.02322090302414629)
+
+`stats.ttest_ind_from_stats(mean1=45, mean2 = 40, 
+                           std1 = 45, std2 = 40, 
+                           nobs1 = 2000, nobs2 = 2000)`
+
+Ttest_indResult(statistic=3.7139067635410377, pvalue=0.00020686865954628388)
+
+____
+
