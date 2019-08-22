@@ -32,3 +32,16 @@ ____
 
 #### Checkpoint 3
 
+Call out the potential biases in the proposed experiment. Do your best to try to discover not only the bias, but the initial design. There is plenty of room for interpretation here, so make sure to state what assumptions you're making.
+
+1. You're testing advertising emails for a bathing suit company and you test one version of the email in February and the other in May.
+2. You open a clinic to treat anxiety and find that the people who visit show a higher rate of anxiety than the general population.
+3. You launch a new ad billboard based campaign and see an increase in website visits in the first week.
+4. You launch a loyalty program but see no change in visits in the first week.
+
+*Answers*
+
+1. **Selection bias:** People are more likely to open relations to bathing suits at the onset of summer (May) vs. the middle of winter (Feb). 
+2. **Biased sample:** There's a degree of self-selection here. People with anxiety or anxiety-like symptoms are more likely to visit the clinic in the first place (as compared to the general public), and as such, an analysis will reveal a higher rate of anxiety. The two samples aren't randomised at all. 
+3. This use case might represent a bias in selection of the key outcome variable. It is fairly intuitive that a new billboard campaign will result in increase in website visits, but the more important business variable might rather be the *order conversion rate* or an intermediary step like the *add to bag rate*. An increase in website visits doesn't confirm that a hypothesis connecting marketing spend and final revenue, but rather just marketing spend and initial acquisition numbers.  
+4. A loyalty program is likely to have returns over a longer timeframe, and as such, is quite likely to not show substantial changes in the first week. 
