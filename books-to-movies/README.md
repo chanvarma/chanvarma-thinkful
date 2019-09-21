@@ -3,7 +3,7 @@
   * `.ipynb` file — [here](https://github.com/chanvarma/thinkful-capstones/blob/master/books_to_movies/data_wrangling.ipynb) (large file containing print outputs that are 2000+ lines, and is primarily a workbook that is not formatted for viewing on github)
   
 * Main project workbook (contains project introduction, research questions, data visualisation and inferences)
-  * `.py` file — [here](https://github.com/chanvarma/thinkful-capstones/blob/master/books-to-movies/data_viz.py)
+  * `.py` file — [here](https://github.com/chanvarma/thinkful-capstones/blob/master/books_to_movies/data_viz.py)
   * `.ipynb` file — [here](https://github.com/chanvarma/thinkful-capstones/blob/master/books_to_movies/data_viz.ipynb)
   * `.html` file — [here](https://github.com/chanvarma/thinkful-capstones/blob/master/books_to_movies/data_viz.html) > _Right Click on 'View raw' > 'Save Link As...' > Open in a web browser of choice_
   
